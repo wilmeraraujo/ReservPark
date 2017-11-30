@@ -32,5 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/texto_btn_crearpark"
+        android:background="@color/colorVerde"
+        android:textColor="@android:color/white"
         android:onClick="validateCreatePark"/>
 </LinearLayout>

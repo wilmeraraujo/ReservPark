@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -26,6 +28,31 @@ public class MainActivity extends AppCompatActivity {
     LinearLayoutManager linearLayoutManager;
     List<Park> listaParks = new ArrayList<>();
     SqliteHelper sqliteHelper;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        //Mostrar las opciones en la toolbar a traves de un menu
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.opcion1:
+                Toast.makeText(this, "Parqueaderos", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.opcion2:
+                Toast.makeText(this, "Realizar reserva", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.opcion3:
+                /*Intent i = new Intent(this, LoginActivity.class);
+                startActivity(i);*/
+                Toast.makeText(this, "Logeo para propietarios", Toast.LENGTH_SHORT).show();
+            default:
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

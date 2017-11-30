@@ -14,20 +14,24 @@
             android:id="@+id/parksRecylerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="65dp"
-            android:layout_marginTop="1dp">
+            android:layout_marginBottom="60dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/colorAccent">
         </android.support.v7.widget.RecyclerView>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_alignParentBottom="true"
-            android:background="#58ACFA"
+            android:background="@color/colorPrimary"
             android:padding="20px">
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/texto_boton_registrar"
+                android:background="@color/colorAzul"
+                android:textColor="@color/colorVerde"
+                android:textSize="8pt"
                 android:onClick="goToRegister"/>
         </LinearLayout>
     </RelativeLayout>
