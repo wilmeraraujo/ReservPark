@@ -2,7 +2,49 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/logoreservpark" />
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_arrow_back"
+            android:layout_margin="20px"
+            android:onClick="goToPrincipal"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Regresar"
+            android:textColor="@color/colorVerde"
+            android:textStyle="bold"
+            android:layout_margin="20px"
+            android:textSize="8pt"
+            android:layout_toRightOf="@+id/imgBack"
+            />
+        <TextView
+            android:id="@+id/txtUbicaion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BIENVENIDOS"
+            android:textColor="@color/colorAzulClaro"
+            android:textSize="16pt"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20px"
+            android:textStyle="bold"
+            />
+    </RelativeLayout>
     <EditText
         android:id="@+id/txtNombre"
         android:layout_width="match_parent"
@@ -35,4 +77,11 @@
         android:background="@color/colorVerde"
         android:textColor="@android:color/white"
         android:onClick="validateCreatePark"/>
+
+    <!--<Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="@string/Regresar"
+        android:onClick="goToPrincipal"
+        />-->
 </LinearLayout>

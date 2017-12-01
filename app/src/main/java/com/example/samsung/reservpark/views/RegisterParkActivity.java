@@ -36,6 +36,10 @@ public class RegisterParkActivity extends AppCompatActivity {
 
         sqliteHelper = new SqliteHelper(this, "dbprueba", null, 1);
     }
+    public void goToPrincipal(View view) {
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
+    }
 
     public void validateCreatePark(View view) {
         String valorNombre = txtNombre.getText().toString();
