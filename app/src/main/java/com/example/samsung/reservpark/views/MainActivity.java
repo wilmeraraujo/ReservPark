@@ -92,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (listaParks.size() > 0) {
             processData();
+            Toast.makeText(this, "Registro exitoso", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(this, "No hay elementos para mostrar", Toast.LENGTH_SHORT).show();
         }
